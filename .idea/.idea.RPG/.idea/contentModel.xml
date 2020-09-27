@@ -32,6 +32,7 @@
             <e p="Health.cs" t="Include" />
           </e>
           <e p="Control" t="Include">
+            <e p="AIController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
           <e p="Core" t="Include">

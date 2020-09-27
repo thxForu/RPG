@@ -49,7 +49,7 @@ namespace RPG.Combat
         {
             GetComponent<Animator>().ResetTrigger(StopAttackT);
             GetComponent<Animator>().SetTrigger(AttackT);
-        }
+        } 
 
         //Animation Event
         private void Hit()
@@ -64,16 +64,15 @@ namespace RPG.Combat
             return isInRange;
         }
 
-        public void Attack(CombatTarget combatTarget)
+        public void Attack(GameObject combatTarget)
         {
             GetComponent<ActionScheduler>().StartAction(this);
             _target = combatTarget.GetComponent<Health>();
         }
 
-        public bool CanAttack(CombatTarget combatTarget) 
+        public bool CanAttack(GameObject combatTarget) 
         {
-            if (combatTarget == null)
-                return false;
+            if (combatTarget == null) return false;
             
             Health targetToTest = combatTarget.GetComponent<Health>();
             return targetToTest != null && !targetToTest.IsDead();
