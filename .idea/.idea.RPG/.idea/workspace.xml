@@ -49,13 +49,13 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/FollowCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/CombatTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/FollowCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ActionScheduler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/CombatTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ActionScheduler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" />
       </list>
     </option>
@@ -105,7 +105,7 @@
       <workItem from="1595585316284" duration="5519000" />
       <workItem from="1595629172885" duration="1649000" />
       <workItem from="1601195998630" duration="52000" />
-      <workItem from="1601196082446" duration="6276000" />
+      <workItem from="1601196082446" duration="9585000" />
     </task>
     <servers />
   </component>
@@ -129,6 +129,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601210498078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601210498078" />
     <state x="892" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1595629420114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
