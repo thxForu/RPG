@@ -11,7 +11,7 @@ namespace RPG.Combat
         [SerializeField] private float weaponDamage = 5f;
         
         private Health _target;
-        private float _timeSinceLastAttack = 0;
+        private float _timeSinceLastAttack = Mathf.Infinity;
         
         private static readonly int AttackT = Animator.StringToHash("attack");
         private static readonly int StopAttackT = Animator.StringToHash("stopAttack");

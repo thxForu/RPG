@@ -52,11 +52,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/FollowCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/CombatTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ActionScheduler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/AIController.cs" />
       </list>
     </option>
@@ -106,7 +107,7 @@
       <workItem from="1595585316284" duration="5519000" />
       <workItem from="1595629172885" duration="1649000" />
       <workItem from="1601195998630" duration="52000" />
-      <workItem from="1601196082446" duration="11676000" />
+      <workItem from="1601196082446" duration="15564000" />
     </task>
     <servers />
   </component>
@@ -138,9 +139,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601216341605" />
-    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1595629420114">
+    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1601221065199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601221065199" />
     <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595629420114" />
   </component>
 </project>

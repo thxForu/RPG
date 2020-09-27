@@ -1,7 +1,7 @@
 ﻿using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Core
 {
     public class Health : MonoBehaviour
     {
@@ -29,6 +29,7 @@ namespace RPG.Combat
             if (isDead) return;
             isDead = true;
             GetComponent<Animator>().SetTrigger(DieTrigger);
+            GetComponent<ActionScheduler>().CancelCurrentAction();
         }
     }
 }
