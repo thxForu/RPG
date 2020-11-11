@@ -1,9 +1,9 @@
-﻿using RPG.Movement;
-using RPG.Combat;
+﻿using RPG.Combat;
 using RPG.Core;
+using RPG.Movement;
 using UnityEngine;
 
-namespace RPG.Control
+namespace Control
 {
     public class PlayerController : MonoBehaviour
     {
@@ -19,7 +19,6 @@ namespace RPG.Control
         private void Update()
         {
             if (_health.IsDead()) return;
-
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
         }
@@ -37,7 +36,7 @@ namespace RPG.Control
                 {
                     continue;
                 }
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                     
