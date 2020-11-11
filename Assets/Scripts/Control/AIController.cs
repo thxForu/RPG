@@ -13,6 +13,9 @@ namespace Control
         [SerializeField] private PatrolPath patrolPath;
         [SerializeField] private float waypointTolerance = 1f;
         [SerializeField] private float waypointDwellTime = 3f;
+        [Range(0,1)]
+        [SerializeField] private float patrolSpeedFraction = 0.2f;
+        
         private GameObject _player;
         private Vector3 guardPosition;
         private float timeSinceLastSawPlayer = Mathf.Infinity;
@@ -75,7 +78,7 @@ namespace Control
 
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
-                _mover.StartMoveAction(nextPosition);
+                _mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
         }
 

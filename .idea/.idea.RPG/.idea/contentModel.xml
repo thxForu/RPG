@@ -5,11 +5,66 @@
     <e p="C:\Users\xavav\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_RPG.546636405.00" t="ExcludeRecursive" />
     <e p="D:\Unity\Projects\RPG" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Asset Packs" t="Include">
           <e p="Animations by Explosive" t="Include">
             <e p="README - Usage Rights for these assets 1.txt" t="Include" />
+          </e>
+          <e p="Azure[Sky] Dynamic Skybox" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AzureEffectsControllerInspector.cs" t="Include" />
+              <e p="AzureEventControllerInspector.cs" t="Include" />
+              <e p="AzureOutputProfileInspector.cs" t="Include" />
+              <e p="AzureReflectionControllerInspector.cs" t="Include" />
+              <e p="AzureSkyControllerInspector.cs" t="Include" />
+              <e p="AzureSkyProfileInspector.cs" t="Include" />
+              <e p="AzureTimeControllerInspector.cs" t="Include" />
+            </e>
+            <e p="Scenes" t="Include">
+              <e p="Utilities" t="Include">
+                <e p="AzureCameraOrbit.cs" t="Include" />
+                <e p="AzureOpenURL.cs" t="Include" />
+                <e p="AzureOutputExample.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="AzureEffectsController.cs" t="Include" />
+              <e p="AzureEventController.cs" t="Include" />
+              <e p="AzureFogScattering.cs" t="Include" />
+              <e p="AzureOutputProfile.cs" t="Include" />
+              <e p="AzureReflectionController.cs" t="Include" />
+              <e p="AzureSkyController.cs" t="Include" />
+              <e p="AzureSkyProfile.cs" t="Include" />
+              <e p="AzureTimeController.cs" t="Include" />
+              <e p="AzureWeatherZone.cs" t="Include" />
+              <e p="Utilities" t="Include">
+                <e p="AzureColorProperty.cs" t="Include" />
+                <e p="AzureFloatProperty.cs" t="Include" />
+                <e p="AzureOutput.cs" t="Include" />
+                <e p="AzureOutputProperty.cs" t="Include" />
+                <e p="AzureShaderUniforms.cs" t="Include" />
+                <e p="AzureSkySettings.cs" t="Include" />
+                <e p="AzureSkyUtilities.cs" t="Include" />
+                <e p="AzureThunderEffect.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="AzureShaderUniforms.cginc" t="Include" />
+              <e p="DynamicClouds.shader" t="Include" />
+              <e p="EmptySky.shader" t="Include" />
+              <e p="FogScattering.shader" t="Include" />
+              <e p="StaticClouds.shader" t="Include" />
+              <e p="Transparent" t="Include">
+                <e p="AzureFogCore.cginc" t="Include" />
+                <e p="ParticleAdd.shader" t="Include" />
+                <e p="ParticleAlphaBlend.shader" t="Include" />
+                <e p="ParticleMultiply.shader" t="Include" />
+                <e p="UnlitAlpha.shader" t="Include" />
+              </e>
+              <e p="WeatherParticles.shader" t="Include" />
+            </e>
           </e>
           <e p="Synty - Polygon Student Sample" t="Include">
             <e p="README - Usage Rights for these assets.txt" t="Include" />

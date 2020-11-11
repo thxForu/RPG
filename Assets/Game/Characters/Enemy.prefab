@@ -27,6 +27,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
+  suspicionTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
+--- !u!114 &-2963773024484738336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305977900414361263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0520d40f953ff47a27dba0c559f65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &194105158095197882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,19 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730699d5cda849b4a844436c71bad56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-2963773024484738336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305977900414361263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c0520d40f953ff47a27dba0c559f65e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1001 &193005762956956034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +140,7 @@ PrefabInstance:
     - target: {fileID: -631395098267907817, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
         type: 3}
       propertyPath: healthPoint
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1050950472, guid: 8c39f8c10159e5f41a4cca6e5069bd57, type: 3}
       propertyPath: m_Speed
