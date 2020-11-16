@@ -21,10 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8ff2caec-1315-46cb-a42b-7aca968cd5fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Heavy Rain Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Heavy Rain Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Rain Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Rain Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Ripple Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Ripple Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Snow Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Snow Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Weapons.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SandBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SandBox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SandBox/Course Sandbox Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SandBox/Course Sandbox Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SendBox2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SendBox2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cinematics/CinematicControlRemover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ActionScheduler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/CombatTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +72,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Cinematics/FakePlayableDirector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Fighter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cinematics/CinematicControlRemover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/SceneManagment/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Fader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +129,7 @@
       <workItem from="1601196082446" duration="17397000" />
       <workItem from="1604929466002" duration="3134000" />
       <workItem from="1605109519654" duration="5900000" />
+      <workItem from="1605548112621" duration="7186000" />
     </task>
     <servers />
   </component>
@@ -142,6 +158,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601210498078" />
+    <state x="2523" y="137" width="714" height="888" key="find.popup" timestamp="1605550243458">
+      <screen x="1920" y="61" width="1920" height="1040" />
+    </state>
+    <state x="2523" y="137" width="714" height="888" key="find.popup/0.0.1920.1040/1920.61.1920.1040@1920.61.1920.1040" timestamp="1605550243458" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601216341605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -150,6 +170,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601221065199" />
-    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595629420114" />
   </component>
 </project>
