@@ -75,9 +75,9 @@
         <option value="$PROJECT_DIR$/Assets/Game/SceneManagment/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Fader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +129,7 @@
       <workItem from="1601196082446" duration="17397000" />
       <workItem from="1604929466002" duration="3134000" />
       <workItem from="1605109519654" duration="5900000" />
-      <workItem from="1605548112621" duration="7186000" />
+      <workItem from="1605548112621" duration="7902000" />
     </task>
     <servers />
   </component>
