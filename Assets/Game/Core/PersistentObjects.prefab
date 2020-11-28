@@ -28,7 +28,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5573603471900981063}
-  - {fileID: 5974010521656293784}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,11 +168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saving
       objectReference: {fileID: 0}
-    - target: {fileID: 2344402153867767826, guid: 9189a2254c5b57f409679f7195c1b048,
-        type: 3}
-      propertyPath: fadeInTime
-      value: 0.2
-      objectReference: {fileID: 0}
+    - target: {fileID: '', guid: '', type: ''}
+      propertyPath: 
+      value: 
+      objectReference: {fileID: ''}
     - target: {fileID: 2750479733104197815, guid: 9189a2254c5b57f409679f7195c1b048,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -231,9 +229,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9189a2254c5b57f409679f7195c1b048, type: 3}
---- !u!4 &5974010521656293784 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2750479733104197815, guid: 9189a2254c5b57f409679f7195c1b048,
-    type: 3}
-  m_PrefabInstance: {fileID: 8416198923300026671}
-  m_PrefabAsset: {fileID: 0}

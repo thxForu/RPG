@@ -78,11 +78,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Fader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" />
+=======
+>>>>>>> parent of 3798022... saving system
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SavingWrapper.cs" />
+=======
+>>>>>>> parent of 3798022... saving system
       </list>
     </option>
   </component>
@@ -134,9 +140,13 @@
       <workItem from="1601196082446" duration="17397000" />
       <workItem from="1604929466002" duration="3134000" />
       <workItem from="1605109519654" duration="5900000" />
+<<<<<<< HEAD
       <workItem from="1605548112621" duration="7902000" />
       <workItem from="1606424327330" duration="386000" />
       <workItem from="1606571625764" duration="7684000" />
+=======
+      <workItem from="1605548112621" duration="7186000" />
+>>>>>>> parent of 3798022... saving system
     </task>
     <servers />
   </component>

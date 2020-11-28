@@ -107,7 +107,6 @@
           <e p="SceneManagement" t="Include">
             <e p="Fader.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
-            <e p="SavingWrapper.cs" t="Include" />
           </e>
         </e>
       </e>
