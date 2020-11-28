@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace RPT.SceneManagement
@@ -10,7 +9,10 @@ namespace RPT.SceneManagement
         Coroutine currentActiveFade;
 
         private void Awake() {
+
             canvasGroup = GetComponent<CanvasGroup>();
+            Debug.Log(canvasGroup.alpha);
+
         }
 
         public void FadeOutImmediate()

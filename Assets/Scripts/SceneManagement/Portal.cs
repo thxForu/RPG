@@ -1,7 +1,6 @@
-﻿using System;
-
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
+using Control;
+using RPG.SceneManagement;
 using RPT.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,8 +12,8 @@ public class Portal : MonoBehaviour
     [SerializeField] private int sceneToLoad = -1;
     [SerializeField] private DestinationIdentifier destination;
     [SerializeField] private float fadeOutTime = 1f;
-    [SerializeField] private float fadeItTime = 1f;
-    [SerializeField] private float fadeWaitTime = 1f;
+    [SerializeField] private float fadeInTime = 2f;
+    [SerializeField] private float fadeWaitTime = 0.5f;
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -25,25 +24,39 @@ public class Portal : MonoBehaviour
 
     private IEnumerator Transition()
     {
-        if (sceneToLoad <0)
+        if (sceneToLoad < 0)
         {
             Debug.LogError("Scene to load not set.");
             yield break;
         }
 
         DontDestroyOnLoad(gameObject);
-        
-        Fader fader = FindObjectOfType<Fader>();
-        
-        yield return fader.FadeOut(fadeOutTime);
-        yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
+        Fader fader = FindObjectOfType<Fader>();
+        SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+        PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        playerController.enabled = false;
+            
+        yield return fader.FadeOut(fadeOutTime);
+
+        savingWrapper.Save();
+
+        yield return SceneManager.LoadSceneAsync(sceneToLoad);
+        PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        newPlayerController.enabled = false;
+
+
+        savingWrapper.Load();
+            
         Portal otherPortal = GetOtherPortal();
         UpdatePlayer(otherPortal);
-        
-        yield return new WaitForSeconds(fadeWaitTime);
-        yield return fader.FadeIn(fadeItTime);
 
+        savingWrapper.Save();
+
+        yield return new WaitForSeconds(fadeWaitTime);
+        fader.FadeIn(fadeInTime);
+
+        newPlayerController.enabled = true;
         Destroy(gameObject);
     }
 
@@ -53,6 +66,7 @@ public class Portal : MonoBehaviour
         {
             if (portal == this) continue;
             if (portal.destination != destination) continue;
+            
             return portal;
         }
 
@@ -61,8 +75,17 @@ public class Portal : MonoBehaviour
     private void UpdatePlayer(Portal otherPortal)
     {
         GameObject player = GameObject.FindWithTag("Player");
+        player.GetComponent<NavMeshAgent>().enabled = false;
+        player.transform.position = otherPortal.spawnPoint.position;
+        player.transform.rotation = otherPortal.spawnPoint.rotation;
+        player.GetComponent<NavMeshAgent>().enabled = true;
+        /*
+        GameObject player = GameObject.FindWithTag("Player");
+        player.GetComponent<NavMeshAgent>().enabled = false;
         player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
         player.transform.rotation = otherPortal.spawnPoint.rotation;
+        player.GetComponent<NavMeshAgent>().enabled = true;
+        */
     }
 }
 

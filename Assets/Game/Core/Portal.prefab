@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4119193299477539815}
   - component: {fileID: 7955442505897110152}
   - component: {fileID: 6397448045304843767}
-  - component: {fileID: 3339240487114801157}
+  - component: {fileID: 2443930910916667864}
   m_Layer: 2
   m_Name: Portal
   m_TagString: Untagged
@@ -93,7 +93,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3339240487114801157
+--- !u!114 &2443930910916667864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,5 +109,5 @@ MonoBehaviour:
   sceneToLoad: -1
   destination: 0
   fadeOutTime: 0.2
-  fadeItTime: 0.2
-  fadeWaitTime: 0.1
+  fadeInTime: 0.5
+  fadeWaitTime: 0.2
