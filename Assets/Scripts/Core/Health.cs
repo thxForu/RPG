@@ -1,10 +1,9 @@
-﻿using RPG.Saving;
-using UnityEditor.Profiling.Memory.Experimental;
+﻿using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour, ISaveable
+    public class Health : MonoBehaviour
     {
         [SerializeField] private float healthPoint = 100f;
         private static readonly int DieTrigger = Animator.StringToHash("die");
