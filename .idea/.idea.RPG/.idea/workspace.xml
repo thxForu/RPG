@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8ff2caec-1315-46cb-a42b-7aca968cd5fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Assets/Game/Core/Saving.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" afterDir="false" />
@@ -36,6 +37,20 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SavingWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SavingWrapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SavingWrapper.cs.meta" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Heavy Rain Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Heavy Rain Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Rain Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Rain Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Ripple Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Ripple Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Snow Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Packs/Azure[Sky] Dynamic Skybox/Materials/Snow Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SandBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SandBox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SandBox/Course Sandbox Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SandBox/Course Sandbox Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SendBox2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SendBox2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+>>>>>>> parent of db435a6... Saving System with off Fader
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +81,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/CombatTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ActionScheduler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/PatrolPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/AIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cinematics/CinematicTrigger.cs" />
@@ -77,18 +94,24 @@
         <option value="$PROJECT_DIR$/Assets/Game/SceneManagment/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagment/Fader.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" />
 =======
 >>>>>>> parent of 3798022... saving system
+=======
+>>>>>>> parent of db435a6... Saving System with off Fader
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Portal.cs" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SavingWrapper.cs" />
 =======
 >>>>>>> parent of 3798022... saving system
+=======
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PeristentObjectSpawner.cs" />
+>>>>>>> parent of db435a6... Saving System with off Fader
       </list>
     </option>
   </component>
@@ -142,11 +165,14 @@
       <workItem from="1605109519654" duration="5900000" />
 <<<<<<< HEAD
       <workItem from="1605548112621" duration="7902000" />
+<<<<<<< HEAD
       <workItem from="1606424327330" duration="386000" />
       <workItem from="1606571625764" duration="7684000" />
 =======
       <workItem from="1605548112621" duration="7186000" />
 >>>>>>> parent of 3798022... saving system
+=======
+>>>>>>> parent of db435a6... Saving System with off Fader
     </task>
     <servers />
   </component>
@@ -171,14 +197,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1606580449674">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.61.1920.1040@0.0.1920.1040" timestamp="1606580449674" />
-    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1606572456737">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.61.1920.1040@0.0.1920.1040" timestamp="1606572456737" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601210498078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -191,10 +209,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601216341605" />
-    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1606573641758">
+    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1601221065199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601221065199" />
-    <state x="892" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.61.1920.1040@0.0.1920.1040" timestamp="1606573641758" />
   </component>
 </project>
