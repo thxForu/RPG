@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
-//using RPG.Saving;
+﻿using System.Collections;
 using RPT.SceneManagement;
+using Saving;
 using UnityEngine;
 
-namespace RPG.SceneManagement
+namespace SceneManagement
 {
     public class SavingWrapper : MonoBehaviour
     {
@@ -13,15 +12,7 @@ namespace RPG.SceneManagement
 
         private void Awake()
         {
-            //StartCoroutine(LoadLastScene());
-        }
-
-        private IEnumerator Start()
-        {
-            Fader fader = FindObjectOfType<Fader>();
-            fader.FadeOutImmediate();
-            //yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
-            yield return fader.FadeIn(fadeInTime);
+            StartCoroutine(LoadLastScene());
         }
 
         void Update()
@@ -39,20 +30,30 @@ namespace RPG.SceneManagement
             {
                 Delete();
             }
-            
         }
+
+        private IEnumerator LoadLastScene() {
+            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
+            Fader fader = FindObjectOfType<Fader>();
+            fader.FadeOutImmediate();
+            yield return fader.FadeIn(fadeInTime);
+        }
+
+
 
         public void Load()
         {
-            //GetComponent<SavingSystem>().Load(defaultSaveFile);
+            GetComponent<SavingSystem>().Load(defaultSaveFile);
         }
+
         public void Save()
         {
-            //GetComponent<SavingSystem>().Save(defaultSaveFile);
+            GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
+
         public void Delete()
         {
-            //GetComponent<SavingSystem>().Delete(defaultSaveFile);
+            GetComponent<SavingSystem>().Delete(defaultSaveFile);
         }
     }
 }
