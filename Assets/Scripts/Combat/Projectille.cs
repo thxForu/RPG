@@ -7,15 +7,24 @@ using UnityEngine;
 public class Projectille : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
+    [SerializeField] private bool isHoming = true;
+    private float damage = 0f;
 
     private Health target;
 
-    private float damage = 0f;
-    // Update is called once per frame
+    private void Start()
+    {
+        transform.LookAt(GetAimLocation());
+    }
+
     void Update()
     {
         if (target == null) return;
-        transform.LookAt(GetAimLocation());
+        if (isHoming && !target.IsDead())
+        {
+            transform.LookAt(GetAimLocation());
+        }
+
         transform.Translate(Vector3.forward*speed*Time.deltaTime);
     }
 
@@ -37,6 +46,7 @@ public class Projectille : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Health>() != target) return;
+        if (target.IsDead()) return;
         target.TakeDamage(damage);
         Destroy(gameObject);
     }

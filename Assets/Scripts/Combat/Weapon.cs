@@ -16,7 +16,7 @@ namespace Combat
         private const string weaponName = "weapon";
         public void Spawn(Transform rightHand, Transform leftHand , Animator animator)
         {
-            //DestroyOldWeapon(rightHand, leftHand);
+            DestroyOldWeapon(rightHand, leftHand);
             if (equippedPrefab != null)
             {
                 var handTransform = GetTransform(rightHand, leftHand);
@@ -34,7 +34,7 @@ namespace Combat
             Transform oldWeapon = rightHand.Find(weaponName);
             if (oldWeapon == null)
             {
-                oldWeapon = oldWeapon.Find(weaponName);
+                oldWeapon = leftHand.Find(weaponName);
             }
             if (oldWeapon == null) return;
             
