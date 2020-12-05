@@ -81,13 +81,16 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Cinematics" t="Include">
+          <e p="Cinematic" t="Include">
             <e p="CinematicControlRemover.cs" t="Include" />
             <e p="CinematicTrigger.cs" t="Include" />
           </e>
           <e p="Combat" t="Include">
             <e p="CombatTarget.cs" t="Include" />
             <e p="Fighter.cs" t="Include" />
+            <e p="Projectille.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+            <e p="WeaponPickup.cs" t="Include" />
           </e>
           <e p="Control" t="Include">
             <e p="AIController.cs" t="Include" />

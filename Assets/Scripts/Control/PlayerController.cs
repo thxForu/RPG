@@ -1,6 +1,6 @@
-﻿using RPG.Combat;
-using RPG.Core;
-using RPG.Movement;
+﻿using Combat;
+using Core;
+using Movement;
 using UnityEngine;
 
 namespace Control

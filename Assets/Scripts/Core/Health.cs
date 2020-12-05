@@ -1,7 +1,7 @@
 ﻿using Saving;
 using UnityEngine;
 
-namespace RPG.Core
+namespace Core
 {
     public class Health : MonoBehaviour, ISaveable
     {

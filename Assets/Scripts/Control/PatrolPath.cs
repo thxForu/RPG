@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace RPG.Control
+namespace Control
 {
     public class PatrolPath : MonoBehaviour
     {

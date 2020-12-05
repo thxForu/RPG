@@ -31,6 +31,7 @@ MonoBehaviour:
   patrolPath: {fileID: 0}
   waypointTolerance: 1
   waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
 --- !u!114 &-2963773024484738336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  maxSpeed: 6
 --- !u!114 &194105158095197882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +127,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &193005762956510862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 193005762956956034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &193005762956584588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 193005762956956034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4442504364522232604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +159,11 @@ PrefabInstance:
     - target: {fileID: 1050950472, guid: 8c39f8c10159e5f41a4cca6e5069bd57, type: 3}
       propertyPath: m_Speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306731657842432781, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: 8cc903ec-2967-482a-a034-3f98824555e5
       objectReference: {fileID: 0}
     - target: {fileID: 4532577518203522425, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
         type: 3}
@@ -206,6 +225,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5289358688436687500, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 88a997595884569419fcaed174748c36,
+        type: 2}
+    - target: {fileID: 5289358688436687500, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 193005762956584588}
+    - target: {fileID: 5289358688436687500, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 193005762956584588}
+    - target: {fileID: 5289358688436687500, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 193005762956510862}
+    - target: {fileID: 5289358688436687500, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 88a997595884569419fcaed174748c36,
+        type: 2}
     - target: {fileID: 8359926549381449139, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
         type: 3}
       propertyPath: m_Name

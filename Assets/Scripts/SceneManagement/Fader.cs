@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
-namespace RPT.SceneManagement
+namespace SceneManagement
 {
     public class Fader : MonoBehaviour
     {

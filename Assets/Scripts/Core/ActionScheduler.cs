@@ -1,7 +1,6 @@
-﻿using RPG.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace RPG.Core
+namespace Core
 {
     public class ActionScheduler : MonoBehaviour
     {
