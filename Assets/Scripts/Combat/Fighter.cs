@@ -1,11 +1,13 @@
 ﻿using Core;
 using Movement;
+using Saving;
 using UnityEngine;
 
 namespace Combat
 {
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
+        
         [SerializeField] private float timeBetweenAttacks = 1f;
         [SerializeField] private Transform rightHandTransform;
         [SerializeField] private Transform leftHandTransform;
@@ -15,13 +17,15 @@ namespace Combat
         private Weapon currentWeapon;
         private float _timeSinceLastAttack = Mathf.Infinity;
         
-        
         private static readonly int AttackT = Animator.StringToHash("attack");
         private static readonly int StopAttackT = Animator.StringToHash("stopAttack");
 
         private void Start()
         {
-            EquipWeapon(defaultWeapon);
+            if (currentWeapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
         
         private void Update()
@@ -116,5 +120,17 @@ namespace Combat
             GetComponent<Animator>().ResetTrigger(AttackT);
             GetComponent<Animator>().SetTrigger(StopAttackT);
         }
+
+       public object CaptureState()
+       {
+           return currentWeapon.name;
+       }
+
+       public void RestoreState(object state)
+       {
+           string weaponName = (string) state;
+           Weapon weapon = Resources.Load<Weapon>(weaponName);
+           EquipWeapon(weapon);
+       }
     }
 }

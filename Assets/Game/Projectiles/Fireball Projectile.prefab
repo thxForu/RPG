@@ -4917,7 +4917,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  lifeAfterImpact: 0.2
+  maxLifeTime: 7
   isHoming: 1
+  hitEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db,
+    type: 3}
+  destroyOnHit:
+  - {fileID: 3487285653706030407}
 --- !u!65 &5580738163628006533
 BoxCollider:
   m_ObjectHideFlags: 0

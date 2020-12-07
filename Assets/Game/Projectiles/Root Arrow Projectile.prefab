@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2364457422130304803}
   - component: {fileID: 5580738163628006533}
   m_Layer: 0
-  m_Name: Arrow Projectile
+  m_Name: Root Arrow Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  lifeAfterImpact: 0.2
+  maxLifeTime: 7
   isHoming: 1
+  hitEffect: {fileID: 4560989859355570064, guid: e9135edfae761f54a9ca53e28c06a799,
+    type: 3}
+  destroyOnHit:
+  - {fileID: 4381305329856680273}
 --- !u!65 &5580738163628006533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -268,6 +274,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3482dd3d1cf3c3844b8c2f25b95800a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07119b288adf12542aa4497154e38e05, type: 3}
+--- !u!1 &4381305329856680273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 07119b288adf12542aa4497154e38e05,
+    type: 3}
+  m_PrefabInstance: {fileID: 4381305329856780273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4381305329856908657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 07119b288adf12542aa4497154e38e05,

@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2364457422130304803, guid: 887a3508c8c290b4abc3a835657f6bce,
+        type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 4560989859355570064, guid: e9135edfae761f54a9ca53e28c06a799,
+        type: 3}
     - target: {fileID: 5496606254413548141, guid: 887a3508c8c290b4abc3a835657f6bce,
         type: 3}
       propertyPath: m_LocalPosition.x

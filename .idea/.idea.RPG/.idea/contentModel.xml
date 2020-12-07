@@ -66,6 +66,11 @@
               <e p="WeatherParticles.shader" t="Include" />
             </e>
           </e>
+          <e p="SimpleFX - Synty" t="Include">
+            <e p="Materials" t="Include">
+              <e p="UnlitVertexColour_Alpha.shader" t="Include" />
+            </e>
+          </e>
           <e p="Synty - Polygon Student Sample" t="Include">
             <e p="README - Usage Rights for these assets.txt" t="Include" />
           </e>
@@ -99,6 +104,7 @@
           </e>
           <e p="Core" t="Include">
             <e p="ActionScheduler.cs" t="Include" />
+            <e p="DestroyAfterEffect.cs" t="Include" />
             <e p="FollowCamera.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="IAction.cs" t="Include" />
