@@ -1,6 +1,6 @@
 ﻿using Combat;
-using Core;
 using Movement;
+using Resources;
 using UnityEngine;
 
 namespace Control

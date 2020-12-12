@@ -1,5 +1,6 @@
 ﻿using Core;
 using Movement;
+using Resources;
 using Saving;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace Combat
         [SerializeField] private Weapon defaultWeapon;
         
         private Health _target;
-        private Weapon currentWeapon;
+        private Weapon _currentWeapon;
         private float _timeSinceLastAttack = Mathf.Infinity;
         
         private static readonly int AttackT = Animator.StringToHash("attack");
@@ -22,7 +23,7 @@ namespace Combat
 
         private void Start()
         {
-            if (currentWeapon == null)
+            if (_currentWeapon == null)
             {
                 EquipWeapon(defaultWeapon);
             }
@@ -47,11 +48,15 @@ namespace Combat
         }
         public void EquipWeapon(Weapon weapon)
         {
-            currentWeapon = weapon;
+            _currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
+        public Health GetTarget()
+        {
+            return _target;
+        }
         private void AttackBehavior()
         {
             transform.LookAt(_target.transform);
@@ -73,13 +78,13 @@ namespace Combat
         private void Hit()
         {
             if (_target == null) return;
-            if (currentWeapon.HasProjectile())
+            if (_currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target);
+                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject);
             }
             else
             {
-                _target.TakeDamage(currentWeapon.GetDamage());
+                _target.TakeDamage(gameObject, _currentWeapon.GetDamage());
             }
         }
 
@@ -90,7 +95,7 @@ namespace Combat
 
         private bool GetIsInRange()
         {
-            bool isInRange = Vector3.Distance(transform.position, _target.transform.position) < currentWeapon.GetRange();
+            bool isInRange = Vector3.Distance(transform.position, _target.transform.position) < _currentWeapon.GetRange();
             return isInRange;
         }
 
@@ -123,13 +128,13 @@ namespace Combat
 
        public object CaptureState()
        {
-           return currentWeapon.name;
+           return _currentWeapon.name;
        }
 
        public void RestoreState(object state)
        {
            string weaponName = (string) state;
-           Weapon weapon = Resources.Load<Weapon>(weaponName);
+           Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
            EquipWeapon(weapon);
        }
     }

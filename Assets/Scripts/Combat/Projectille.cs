@@ -1,4 +1,5 @@
 ﻿using Core;
+using Resources;
 using UnityEngine;
 
 namespace Combat
@@ -14,6 +15,7 @@ namespace Combat
     
         private float damage = 0f;
         private Health target;
+        private GameObject instigator;
 
         private void Start()
         {
@@ -31,10 +33,11 @@ namespace Combat
             transform.Translate(Vector3.forward*speed*Time.deltaTime);
         }
 
-        public void SetTarget(Health target, float damage)
+        public void SetTarget( Health target, float damage, GameObject instigator)
         {
             this.target = target;
             this.damage = damage;
+            this.instigator = instigator;
         
             Destroy(gameObject, maxLifeTime);
         }
@@ -53,7 +56,7 @@ namespace Combat
         
             if (other.GetComponent<Health>() != target) return;
             if (target.IsDead()) return;
-            target.TakeDamage(damage);
+            target.TakeDamage(instigator, damage);
 
             speed = 0;
             if (hitEffect != null)

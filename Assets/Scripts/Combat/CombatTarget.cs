@@ -1,4 +1,5 @@
 ﻿using Core;
+using Resources;
 using UnityEngine;
 
 namespace Combat

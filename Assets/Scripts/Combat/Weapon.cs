@@ -1,4 +1,5 @@
 ﻿using Core;
+using Resources;
 using UnityEngine;
 
 namespace Combat
@@ -61,12 +62,12 @@ namespace Combat
             return projectile != null;
         }
         
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator)
         {
             
             Projectille projectileInstance =
                 Instantiate(projectile, GetTransform(rightHand, leftHand).position, Quaternion.identity);
-            projectileInstance.SetTarget(target, weaponDamage);
+            projectileInstance.SetTarget(target, weaponDamage,instigator);
         }
         
         public float GetRange()

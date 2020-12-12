@@ -92,6 +92,7 @@
           </e>
           <e p="Combat" t="Include">
             <e p="CombatTarget.cs" t="Include" />
+            <e p="EnemyHealthDisplay.cs" t="Include" />
             <e p="Fighter.cs" t="Include" />
             <e p="Projectille.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
@@ -106,12 +107,16 @@
             <e p="ActionScheduler.cs" t="Include" />
             <e p="DestroyAfterEffect.cs" t="Include" />
             <e p="FollowCamera.cs" t="Include" />
-            <e p="Health.cs" t="Include" />
             <e p="IAction.cs" t="Include" />
             <e p="PeristentObjectSpawner.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
             <e p="Mover.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Experience.cs" t="Include" />
+            <e p="Health.cs" t="Include" />
+            <e p="HealthDisplay.cs" t="Include" />
           </e>
           <e p="Saving" t="Include">
             <e p="ISaveable.cs" t="Include" />
@@ -123,6 +128,11 @@
             <e p="Fader.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
             <e p="SavingWrapper.cs" t="Include" />
+          </e>
+          <e p="Stats" t="Include">
+            <e p="BaseStats.cs" t="Include" />
+            <e p="CharacterClass.cs" t="Include" />
+            <e p="Progression.cs" t="Include" />
           </e>
         </e>
       </e>
