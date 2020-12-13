@@ -7,6 +7,7 @@ namespace Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
+        [SerializeField] private float regenerationPercentage = 70;
         private float healthPoint = -1f;
         private static readonly int DieTrigger = Animator.StringToHash("die");
         
@@ -14,18 +15,21 @@ namespace Resources
 
         private void Start()
         {
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
             if (healthPoint < 0)
             {
                 healthPoint = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
         }
 
+       
         public bool IsDead()
         {
             return isDead;
         }
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print(gameObject.name +" took damage: " + damage);
             healthPoint = Mathf.Max(healthPoint - damage, 0);
             if (healthPoint == 0)
             {
@@ -34,9 +38,24 @@ namespace Resources
             }
         }
 
+        public float GetHealthPoints()
+        {
+            return healthPoint;
+        }
+
+        public float GetMaxHealthPoints()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
+
         public float GetPercentage()
         {
             return 100 * (healthPoint / GetComponent<BaseStats>().GetStat(Stat.Health));
+        }
+        private void RegenerateHealth()
+        {
+            float regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage/100);
+            healthPoint = Mathf.Max(healthPoint, regenHealthPoints);
         }
 
         private void Die()

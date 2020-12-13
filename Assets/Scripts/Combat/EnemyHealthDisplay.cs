@@ -25,7 +25,7 @@ namespace Combat
                 return;
             }
             Health health = fighter.GetTarget();
-            healthLabile.text = String.Format("{0:0}%", health.GetPercentage());
+            healthLabile.text = String.Format("{0:0}/{1:0}", health.GetHealthPoints(), health.GetMaxHealthPoints());
         }
     }
 }

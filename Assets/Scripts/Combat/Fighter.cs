@@ -2,6 +2,7 @@
 using Movement;
 using Resources;
 using Saving;
+using Stats;
 using UnityEngine;
 
 namespace Combat
@@ -78,13 +79,15 @@ namespace Combat
         private void Hit()
         {
             if (_target == null) return;
+
+            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
             if (_currentWeapon.HasProjectile())
             {
-                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject);
+                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, damage);
             }
             else
             {
-                _target.TakeDamage(gameObject, _currentWeapon.GetDamage());
+                _target.TakeDamage(gameObject, damage);
             }
         }
 

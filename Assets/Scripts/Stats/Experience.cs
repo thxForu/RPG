@@ -1,4 +1,5 @@
-﻿using Saving;
+﻿using System;
+using Saving;
 using UnityEngine;
 
 namespace Stats
@@ -6,10 +7,13 @@ namespace Stats
     public class Experience : MonoBehaviour, ISaveable
     {
         [SerializeField] private float experiencePoints;
-
+        
+        public event Action onExperienceGained;
+        
         public void GainExperience(float experience)
         {
             experiencePoints += experience;
+            onExperienceGained();
         }
 
         public float GetPoints()

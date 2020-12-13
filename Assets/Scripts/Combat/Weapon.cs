@@ -62,7 +62,7 @@ namespace Combat
             return projectile != null;
         }
         
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator, float calculatedDamage)
         {
             
             Projectille projectileInstance =
