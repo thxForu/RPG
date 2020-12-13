@@ -14,7 +14,7 @@ namespace Resources
 
         private void Start()
         {
-            healthPoint = GetComponent<BaseStats>().GetHealth();
+            healthPoint = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public bool IsDead()
@@ -33,7 +33,7 @@ namespace Resources
 
         public float GetPercentage()
         {
-            return 100 * (healthPoint / GetComponent<BaseStats>().GetHealth());
+            return 100 * (healthPoint / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
         private void Die()
@@ -50,7 +50,7 @@ namespace Resources
             Experience experience = instigator.GetComponent<Experience>();
             if (experience is null) return;
             
-            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
         }
 
         public object CaptureState()

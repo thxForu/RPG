@@ -51,14 +51,7 @@ namespace Movement
             float speed = localVelocity.z;
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
-        
-        [System.Serializable]
-        struct MoverSaveData
-        {
-            //public SerializableVector3 position;
-            //public SerializableVector3 rotation;
-        }
-        
+
         public object CaptureState()
         {
             return new SerializableVector3(transform.position);

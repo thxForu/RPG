@@ -133,6 +133,7 @@
             <e p="BaseStats.cs" t="Include" />
             <e p="CharacterClass.cs" t="Include" />
             <e p="Progression.cs" t="Include" />
+            <e p="Stats.cs" t="Include" />
           </e>
         </e>
       </e>
