@@ -1,7 +1,7 @@
 ﻿using Saving;
 using UnityEngine;
 
-namespace Resources
+namespace Stats
 {
     public class Experience : MonoBehaviour, ISaveable
     {

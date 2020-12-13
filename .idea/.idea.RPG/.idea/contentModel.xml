@@ -114,8 +114,6 @@
             <e p="Mover.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
-            <e p="Experience.cs" t="Include" />
-            <e p="ExperienceDisplay.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="HealthDisplay.cs" t="Include" />
           </e>
@@ -133,6 +131,9 @@
           <e p="Stats" t="Include">
             <e p="BaseStats.cs" t="Include" />
             <e p="CharacterClass.cs" t="Include" />
+            <e p="Experience.cs" t="Include" />
+            <e p="ExperienceDisplay.cs" t="Include" />
+            <e p="LevelDisplay.cs" t="Include" />
             <e p="Progression.cs" t="Include" />
             <e p="Stats.cs" t="Include" />
           </e>

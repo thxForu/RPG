@@ -7,14 +7,17 @@ namespace Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] private float healthPoint = 100f;
+        private float healthPoint = -1f;
         private static readonly int DieTrigger = Animator.StringToHash("die");
         
         private bool isDead;
 
         private void Start()
         {
-            healthPoint = GetComponent<BaseStats>().GetStat(Stat.Health);
+            if (healthPoint < 0)
+            {
+                healthPoint = GetComponent<BaseStats>().GetStat(Stat.Health);
+            }
         }
 
         public bool IsDead()

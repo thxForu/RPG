@@ -22,6 +22,8 @@ namespace Saving
         
         public void Delete(string saveFile)
         {
+            print("Delete from " + GetPathFromSaveFile(saveFile));
+
             File.Delete(GetPathFromSaveFile(saveFile));
         }
 

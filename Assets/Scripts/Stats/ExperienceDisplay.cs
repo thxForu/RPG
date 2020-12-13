@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Resources
+namespace Stats
 {
     public class ExperienceDisplay: MonoBehaviour
     {
