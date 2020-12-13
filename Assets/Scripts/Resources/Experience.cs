@@ -12,6 +12,10 @@ namespace Resources
             experiencePoints += experience;
         }
 
+        public float GetPoints()
+        {
+            return experiencePoints;
+        }
         public object CaptureState()
         {
             return experiencePoints;
@@ -21,5 +25,7 @@ namespace Resources
         {
             experiencePoints = (float) state;
         }
+
+        
     }
 }

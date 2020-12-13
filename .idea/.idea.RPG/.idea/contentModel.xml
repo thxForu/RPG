@@ -115,6 +115,7 @@
           </e>
           <e p="Resources" t="Include">
             <e p="Experience.cs" t="Include" />
+            <e p="ExperienceDisplay.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="HealthDisplay.cs" t="Include" />
           </e>
