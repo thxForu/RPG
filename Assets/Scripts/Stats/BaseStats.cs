@@ -1,4 +1,5 @@
 ﻿using System;
+using GameDevTV.Utils;
 using UnityEngine;
 
 namespace Stats
@@ -12,17 +13,18 @@ namespace Stats
         [SerializeField] private GameObject levelUpParticleEffect;
         [SerializeField] private bool shouldUseModifier;
         public event Action onLevelUp;
-        private int currentLevel;
+        LazyValue <int> currentLevel;
 
         private Experience experience;
         private void Awake()
         {
             experience = GetComponent<Experience>();
+            currentLevel = new LazyValue<int>(CalculateLevel);
         }
 
         private void Start()
         {
-            currentLevel = CalculateLevel();
+            currentLevel.ForceInit();
             
         }
 
@@ -45,9 +47,9 @@ namespace Stats
         private void UpdateLevel()
         {
             int newLevel = CalculateLevel();
-            if (newLevel> currentLevel)
+            if (newLevel> currentLevel.value)
             {
-                currentLevel = newLevel;
+                currentLevel.value = newLevel;
                 LevelUpEffect();
                 onLevelUp();
             }
@@ -68,11 +70,7 @@ namespace Stats
 
         public int GetLevel()
         {
-            if (currentLevel < 0)
-            {
-                currentLevel = CalculateLevel();
-            }
-            return currentLevel;
+            return currentLevel.value;
         }
         private float GetBaseStat(Stat stat)
         {

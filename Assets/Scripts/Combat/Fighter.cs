@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Core;
+using GameDevTV.Utils;
 using Movement;
 using Resources;
 using Saving;
@@ -17,18 +19,22 @@ namespace Combat
         [SerializeField] private Weapon defaultWeapon;
         
         private Health _target;
-        private Weapon _currentWeapon;
+        LazyValue<Weapon> _currentWeapon;
         private float _timeSinceLastAttack = Mathf.Infinity;
         
         private static readonly int AttackT = Animator.StringToHash("attack");
         private static readonly int StopAttackT = Animator.StringToHash("stopAttack");
 
+        private void Awake()
+        {
+            _currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
+        }
+
+        
+
         private void Start()
         {
-            if (_currentWeapon == null)
-            {
-                EquipWeapon(defaultWeapon);
-            }
+            _currentWeapon.ForceInit();
         }
         
         private void Update()
@@ -48,9 +54,19 @@ namespace Combat
                 AttackBehavior();
             }
         }
+        private Weapon SetupDefaultWeapon()
+        {
+            AttachWeapon(defaultWeapon);
+            return defaultWeapon;
+        }
         public void EquipWeapon(Weapon weapon)
         {
-            _currentWeapon = weapon;
+            _currentWeapon.value = weapon;
+            AttachWeapon(weapon);
+        }
+
+        private void AttachWeapon(Weapon weapon)
+        {
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
@@ -82,9 +98,9 @@ namespace Combat
             if (_target == null) return;
 
             float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
-            if (_currentWeapon.HasProjectile())
+            if (_currentWeapon.value.HasProjectile())
             {
-                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, damage);
+                _currentWeapon.value.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, damage);
             }
             else
             {
@@ -99,7 +115,7 @@ namespace Combat
 
         private bool GetIsInRange()
         {
-            bool isInRange = Vector3.Distance(transform.position, _target.transform.position) < _currentWeapon.GetRange();
+            bool isInRange = Vector3.Distance(transform.position, _target.transform.position) < _currentWeapon.value.GetRange();
             return isInRange;
         }
 
@@ -134,7 +150,7 @@ namespace Combat
 
             if (stat == Stat.Damage)
             {
-                yield return _currentWeapon.GetDamage();
+                yield return _currentWeapon.value.GetDamage();
                 
             }
         }
@@ -143,13 +159,13 @@ namespace Combat
         {
             if (stat == Stat.Damage)
             {
-                yield return _currentWeapon.GetPercentageBonus();
+                yield return _currentWeapon.value.GetPercentageBonus();
             }
         }
 
         public object CaptureState()
        {
-           return _currentWeapon.name;
+           return _currentWeapon.value.name;
        }
 
        public void RestoreState(object state)
