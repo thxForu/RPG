@@ -1,4 +1,5 @@
-﻿using Combat;
+﻿using System;
+using Combat;
 using Core;
 using Movement;
 using Resources;
@@ -20,19 +21,22 @@ namespace Control
         private Vector3 guardPosition;
         private float timeSinceLastSawPlayer = Mathf.Infinity;
         private float timeSinceArrivedAtWaypoint = Mathf.Infinity;
-        private int currentWaypointIndex = 0;
+        private int currentWaypointIndex;
         
         private Health _health;
         private Fighter _fighter;
         private Mover _mover;
-        
-        
-        private void Start()
+
+        private void Awake()
         {
             _fighter = GetComponent<Fighter>();
             _health = GetComponent<Health>();
             _mover = GetComponent<Mover>();
             _player = GameObject.FindWithTag("Player");
+        }
+
+        private void Start()
+        {
             guardPosition = transform.position; 
         }
 

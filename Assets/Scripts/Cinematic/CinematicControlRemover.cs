@@ -30,5 +30,11 @@ namespace Cinematic
             player.GetComponent<PlayerController>().enabled = true;
             print("EnableControl");
         }
+
+        private void OnDisable()
+        {
+            GetComponent<PlayableDirector>().played -= DisableControl;
+            GetComponent<PlayableDirector>().stopped -= EnableControl;
+        }
     }
 }

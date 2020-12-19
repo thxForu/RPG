@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using System.Collections.Generic;
+using Core;
 using Movement;
 using Resources;
 using Saving;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace Combat
 {
-    public class Fighter : MonoBehaviour, IAction, ISaveable
+    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
         
         [SerializeField] private float timeBetweenAttacks = 1f;
@@ -128,8 +129,25 @@ namespace Combat
             GetComponent<Animator>().ResetTrigger(AttackT);
             GetComponent<Animator>().SetTrigger(StopAttackT);
         }
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        {
 
-       public object CaptureState()
+            if (stat == Stat.Damage)
+            {
+                yield return _currentWeapon.GetDamage();
+                
+            }
+        }
+
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return _currentWeapon.GetPercentageBonus();
+            }
+        }
+
+        public object CaptureState()
        {
            return _currentWeapon.name;
        }

@@ -9,6 +9,7 @@ namespace Combat
     {
         [SerializeField] private float weaponRange = 2f;
         [SerializeField] private float weaponDamage = 5f;
+        [SerializeField] private float percentageBonus;
         [SerializeField] private AnimatorOverrideController animatorOverride;
         [SerializeField] private GameObject equippedPrefab;
         [SerializeField] private bool isRightHanded = true;
@@ -73,6 +74,11 @@ namespace Combat
         public float GetRange()
         {
             return weaponRange;
+        }
+
+        public float GetPercentageBonus()
+        {
+            return percentageBonus;
         }
 
         public float GetDamage()

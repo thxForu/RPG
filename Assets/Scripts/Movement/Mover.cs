@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using System;
+using Core;
 using Resources;
 using Saving;
 using UnityEngine;
@@ -13,9 +14,13 @@ namespace Movement
         private NavMeshAgent _navMeshAgent;
         private Health _health;
 
-        public void Start()
+        private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        public void Start()
+        {
             _health = GetComponent<Health>();
         }
 

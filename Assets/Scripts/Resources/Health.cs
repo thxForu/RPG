@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using System;
+using Core;
 using Saving;
 using Stats;
 using UnityEngine;
@@ -13,16 +14,27 @@ namespace Resources
         
         private bool isDead;
 
-        private void Start()
+        private BaseStats stats;
+        private void Awake()
         {
-            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+            stats = GetComponent<BaseStats>();
             if (healthPoint < 0)
             {
-                healthPoint = GetComponent<BaseStats>().GetStat(Stat.Health);
+                healthPoint = stats.GetStat(Stat.Health);
             }
         }
 
-       
+        private void OnEnable()
+        {
+            stats.onLevelUp += RegenerateHealth;
+        }
+
+        private void OnDisable()
+        {
+            stats.onLevelUp -= RegenerateHealth;
+        }
+
+
         public bool IsDead()
         {
             return isDead;

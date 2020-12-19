@@ -133,6 +133,7 @@
             <e p="CharacterClass.cs" t="Include" />
             <e p="Experience.cs" t="Include" />
             <e p="ExperienceDisplay.cs" t="Include" />
+            <e p="IModifierProvider.cs" t="Include" />
             <e p="LevelDisplay.cs" t="Include" />
             <e p="Progression.cs" t="Include" />
             <e p="Stats.cs" t="Include" />

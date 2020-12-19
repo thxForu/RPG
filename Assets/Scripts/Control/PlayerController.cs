@@ -10,7 +10,8 @@ namespace Control
         private Camera _cam;
         private Health _health;
 
-        private void Start()
+        
+        private void Awake()
         {
             _cam = Camera.main;
             _health = GetComponent<Health>();
