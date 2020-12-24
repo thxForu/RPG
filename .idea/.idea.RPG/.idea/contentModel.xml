@@ -66,6 +66,13 @@
               <e p="WeatherParticles.shader" t="Include" />
             </e>
           </e>
+          <e p="GameDev.tv Assets" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Utils" t="Include">
+                <e p="LazyValue.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="SimpleFX - Synty" t="Include">
             <e p="Materials" t="Include">
               <e p="UnlitVertexColour_Alpha.shader" t="Include" />

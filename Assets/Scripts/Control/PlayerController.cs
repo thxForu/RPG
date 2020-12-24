@@ -2,6 +2,7 @@
 using Movement;
 using Resources;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Control
 {
@@ -9,7 +10,23 @@ namespace Control
     {
         private Camera _cam;
         private Health _health;
+        [SerializeField] private CursorMapping[] cursorMappings;
 
+        enum CursorType
+        {
+            None,
+            Movement,
+            Combat,
+            UI
+        }
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+            public Texture2D texture;
+            public Vector2 hotspot;
+        }
         
         private void Awake()
         {
@@ -19,9 +36,27 @@ namespace Control
 
         private void Update()
         {
-            if (_health.IsDead()) return;
+            if (InteractWithUI())return;
+            if (_health.IsDead())
+            {
+                SetCursor(CursorType.None);
+                return;
+            }
+            
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
+            
+            SetCursor(CursorType.None);
+        }
+
+        private bool InteractWithUI()
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                SetCursor(CursorType.UI);
+                return true;
+            }
+            return false;
         }
 
         private bool InteractWithCombat()
@@ -42,10 +77,14 @@ namespace Control
                     GetComponent<Fighter>().Attack(target.gameObject);
                     
                 }
+
+                SetCursor(CursorType.Combat);
                 return true;
             }
             return false;
         }
+
+        
 
         private bool InteractWithMovement()
         {
@@ -57,11 +96,29 @@ namespace Control
                 {
                     GetComponent<Mover>().StartMoveAction(hit.point, 1f);
                 }
+                SetCursor(CursorType.Movement);
                 return true;
             }
             return false;
         }
+        private void SetCursor(CursorType type)
+        {
+            CursorMapping mapping = GetCursorMapping(type);
+            Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
+        }
 
+        private CursorMapping GetCursorMapping(CursorType type)
+        {
+            foreach (var mapping in cursorMappings)
+            {
+                if (mapping.type == type)
+                {
+                    return mapping;
+                }
+            }
+
+            return cursorMappings[0];
+        }
         private Ray GetMouseRay()
         {
             return _cam.ScreenPointToRay(Input.mousePosition);

@@ -2887,6 +2887,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248075371357356611, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -52.7
+      objectReference: {fileID: 0}
     - target: {fileID: 625199067713179167, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: m_Color.r
@@ -2970,7 +2975,12 @@ PrefabInstance:
     - target: {fileID: 3096614603264566019, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45.797153
+      value: -45.15915
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096614603264566019, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.02901
       objectReference: {fileID: 0}
     - target: {fileID: 3096614604030400552, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
@@ -2980,7 +2990,7 @@ PrefabInstance:
     - target: {fileID: 3096614604030400552, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45.797153
+      value: -45.15915
       objectReference: {fileID: 0}
     - target: {fileID: 3096614604030400552, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
@@ -3052,6 +3062,41 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: beb71f6d-a98e-4c09-a691-5f1c4b20a0eb
       objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[0].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[2].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[1].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2e71a8202d3b4a3448ec85ced5a40265, type: 3}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[0].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[2].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2d18e23e3ce249b4489b8bcdd02d3f48, type: 3}
     - target: {fileID: 5380518975549965869, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: healthPoint
