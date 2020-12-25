@@ -3065,7 +3065,7 @@ PrefabInstance:
     - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: cursorMappings.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
@@ -3097,6 +3097,26 @@ PrefabInstance:
       propertyPath: cursorMappings.Array.data[2].texture
       value: 
       objectReference: {fileID: 2800000, guid: 2d18e23e3ce249b4489b8bcdd02d3f48, type: 3}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[3].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[3].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 6fdfcd4167ed5e7488584241bb671bb2, type: 3}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[4].type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853466839046321133, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[4].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: fee23eb8e5d9ba84ab01910b874b4b30, type: 3}
     - target: {fileID: 5380518975549965869, guid: 1eeb315f3d0c1d046b54f2c27905bc24,
         type: 3}
       propertyPath: healthPoint

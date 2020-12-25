@@ -4,12 +4,22 @@ using GameDevTV.Utils;
 using Saving;
 using Stats;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] private float regenerationPercentage = 70;
+
+        [SerializeField] private TakeDamageEvent takeDamage;
+
+        
+        [System.Serializable]
+        public class TakeDamageEvent : UnityEvent<float>
+        {
+            
+        }
         LazyValue<float> healthPoint;
         private static readonly int DieTrigger = Animator.StringToHash("die");
         
@@ -57,6 +67,10 @@ namespace Resources
             {
                 Die();
                 AwardExperience(instigator);
+            }
+            else
+            {
+                takeDamage.Invoke(damage);
             }
         }
 

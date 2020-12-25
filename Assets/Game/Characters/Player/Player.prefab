@@ -1614,6 +1614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98324262aa8d4574dbd3048e8bd7db2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorMappings: []
+  maxNavMeshProjectionDistance: 1
+  maxNavPathLength: 40
 --- !u!114 &8475831897244938243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2312,6 +2315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: uniqueIdentifier
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431375224031102900, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2418322137557118924, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
         type: 3}
