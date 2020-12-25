@@ -107,6 +107,8 @@
           </e>
           <e p="Control" t="Include">
             <e p="AIController.cs" t="Include" />
+            <e p="CursorType.cs" t="Include" />
+            <e p="IRaycastable.cs" t="Include" />
             <e p="PatrolPath.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
