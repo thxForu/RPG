@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Control;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -32,14 +33,19 @@ namespace SceneManagement
             DontDestroyOnLoad(gameObject);
         
             Fader fader = FindObjectOfType<Fader>();
-
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController.enabled = false;
+            
             yield return fader.FadeOut(fadeOutTime);
 
             savingWrapper.Save();
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
-
+            
+            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            newPlayerController.enabled = false;
+            
             savingWrapper.Load();
             
             Portal otherPortal = GetOtherPortal();
@@ -47,12 +53,11 @@ namespace SceneManagement
 
             savingWrapper.Save();
 
-            otherPortal = GetOtherPortal();
-            UpdatePlayer(otherPortal);
-        
             yield return new WaitForSeconds(fadeWaitTime);
-            yield return fader.FadeIn(fadeItTime);
+            
+            fader.FadeIn(fadeItTime);
 
+            newPlayerController.enabled = true;
             Destroy(gameObject);
         }
 

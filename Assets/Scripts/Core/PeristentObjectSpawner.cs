@@ -7,7 +7,7 @@ namespace Core
         [SerializeField] private GameObject persistentPrefab;
         
         
-        private static bool hasSpawned = false;
+        static bool hasSpawned;
 
         private void Awake()
         {

@@ -1,6 +1,7 @@
 ﻿using Attributes;
 using Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Combat
 {
@@ -11,8 +12,8 @@ namespace Combat
         [SerializeField] private float maxLifeTime = 7f;
         [SerializeField] private bool isHoming = true;
         [SerializeField] private GameObject hitEffect;
-        [SerializeField] private GameObject[] destroyOnHit; 
-    
+        [SerializeField] private GameObject[] destroyOnHit;
+        [SerializeField] private UnityEvent onHit;
         private float damage = 0f;
         private Health target;
         private GameObject instigator;
@@ -57,7 +58,7 @@ namespace Combat
             if (other.GetComponent<Health>() != target) return;
             if (target.IsDead()) return;
             target.TakeDamage(instigator, damage);
-
+            onHit.Invoke();
             speed = 0;
             if (hitEffect != null)
                 Instantiate(hitEffect, GetAimLocation(),transform.rotation);

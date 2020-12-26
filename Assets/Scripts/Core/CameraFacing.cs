@@ -11,7 +11,7 @@ namespace Core
             cam = Camera.main;
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             transform.forward = cam.transform.forward;
         }

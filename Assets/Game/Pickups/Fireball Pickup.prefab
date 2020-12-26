@@ -44,8 +44,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.42
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.48855457
+  m_Center: {x: 0, y: 8.6041395e-17, z: -0.71}
 --- !u!114 &479994354630798481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4790128a94432b4c986f3838fc3be74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 88a997595884569419fcaed174748c36, type: 2}
+  weaponConfig: {fileID: 11400000, guid: 2b7dc65d69d2f5d418d74190c993a687, type: 2}
+  respawnTime: 5
 --- !u!1001 &5098764423399270227
 PrefabInstance:
   m_ObjectHideFlags: 0

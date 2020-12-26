@@ -83,20 +83,26 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -2.4795382e-15
       objectReference: {fileID: 0}
+    - target: {fileID: 479994354630798481, guid: ff3ffd46285653a469532d87dd43340f,
+        type: 3}
+      propertyPath: weaponConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: f314d7dae7171b948a0df6313c702df6,
+        type: 2}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.1700001
       objectReference: {fileID: 0}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12675524
       objectReference: {fileID: 0}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.5629997
       objectReference: {fileID: 0}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
@@ -106,12 +112,12 @@ PrefabInstance:
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 737905808210960023, guid: ff3ffd46285653a469532d87dd43340f,
         type: 3}

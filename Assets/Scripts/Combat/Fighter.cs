@@ -16,10 +16,10 @@ namespace Combat
         [SerializeField] private float timeBetweenAttacks = 1f;
         [SerializeField] private Transform rightHandTransform;
         [SerializeField] private Transform leftHandTransform;
-        [SerializeField] private Weapon defaultWeapon;
+        [SerializeField] private WeaponConfig defaultWeaponConfig;
         
         private Health _target;
-        LazyValue<Weapon> _currentWeapon;
+        LazyValue<WeaponConfig> _currentWeapon;
         private float _timeSinceLastAttack = Mathf.Infinity;
         
         private static readonly int AttackT = Animator.StringToHash("attack");
@@ -27,7 +27,7 @@ namespace Combat
 
         private void Awake()
         {
-            _currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
+            _currentWeapon = new LazyValue<WeaponConfig>(SetupDefaultWeapon);
         }
 
         
@@ -54,21 +54,21 @@ namespace Combat
                 AttackBehavior();
             }
         }
-        private Weapon SetupDefaultWeapon()
+        private WeaponConfig SetupDefaultWeapon()
         {
-            AttachWeapon(defaultWeapon);
-            return defaultWeapon;
+            AttachWeapon(defaultWeaponConfig);
+            return defaultWeaponConfig;
         }
-        public void EquipWeapon(Weapon weapon)
+        public void EquipWeapon(WeaponConfig weaponConfig)
         {
-            _currentWeapon.value = weapon;
-            AttachWeapon(weapon);
+            _currentWeapon.value = weaponConfig;
+            AttachWeapon(weaponConfig);
         }
 
-        private void AttachWeapon(Weapon weapon)
+        private void AttachWeapon(WeaponConfig weaponConfig)
         {
             Animator animator = GetComponent<Animator>();
-            weapon.Spawn(rightHandTransform, leftHandTransform, animator);
+            weaponConfig.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
         public Health GetTarget()
@@ -171,8 +171,8 @@ namespace Combat
        public void RestoreState(object state)
        {
            string weaponName = (string) state;
-           Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
-           EquipWeapon(weapon);
+           WeaponConfig weaponConfig = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
+           EquipWeapon(weaponConfig);
        }
     }
 }

@@ -12,6 +12,7 @@ namespace Attributes
         [SerializeField] private float regenerationPercentage = 70;
 
         [SerializeField] private TakeDamageEvent takeDamage;
+        [SerializeField] private UnityEvent onDie;
 
         
         [System.Serializable]
@@ -64,6 +65,7 @@ namespace Attributes
             healthPoint.value = Mathf.Max(healthPoint.value - damage, 0);
             if (healthPoint.value == 0)
             {
+                onDie.Invoke();
                 Die();
                 AwardExperience(instigator);
             }
