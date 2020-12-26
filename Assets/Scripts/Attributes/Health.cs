@@ -7,31 +7,31 @@ using UnityEngine.Events;
 
 namespace Attributes
 {
+    [System.Serializable]
+    public class TakeDamageEvent : UnityEvent<float>
+    {
+            
+    }
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] private float regenerationPercentage = 70;
+        private static readonly int DieTrigger = Animator.StringToHash("die");
 
+        [SerializeField] private float regenerationPercentage = 70;
         [SerializeField] private TakeDamageEvent takeDamage;
         [SerializeField] private UnityEvent onDie;
-
         
-        [System.Serializable]
-        public class TakeDamageEvent : UnityEvent<float>
-        {
-            
-        }
         LazyValue<float> healthPoint;
-        private static readonly int DieTrigger = Animator.StringToHash("die");
-        
-        private bool isDead;
-
         private BaseStats stats;
+        private bool isDead;
+        private void OnEnable()
+        {
+            stats.onLevelUp += RegenerateHealth;
+        }
         private void Awake()
         {
             stats = GetComponent<BaseStats>();
 
             healthPoint = new LazyValue<float>(GetInitialHealth);
-            
         }
 
         private void Start()
@@ -39,29 +39,12 @@ namespace Attributes
             healthPoint.ForceInit();
         }
 
-        private float GetInitialHealth()
-        {
-            return stats.GetStat(Stat.Health);
-        }
-
-        private void OnEnable()
-        {
-            stats.onLevelUp += RegenerateHealth;
-        }
-
-        private void OnDisable()
-        {
-            stats.onLevelUp -= RegenerateHealth;
-        }
-
-
         public bool IsDead()
         {
             return isDead;
         }
         public void TakeDamage(GameObject instigator, float damage)
         {
-            print(gameObject.name +" took damage: " + damage);
             healthPoint.value = Mathf.Max(healthPoint.value - damage, 0);
             if (healthPoint.value == 0)
             {
@@ -75,6 +58,11 @@ namespace Attributes
             }
         }
 
+        public void Heal(float healthToRestore)
+        {
+            healthPoint.value = Mathf.Min(healthPoint.value + healthToRestore, GetMaxHealthPoints());
+
+        }
         public float GetFraction()
         {
             return healthPoint.value / GetComponent<BaseStats>().GetStat(Stat.Health);
@@ -97,6 +85,10 @@ namespace Attributes
         {
             float regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage/100);
             healthPoint.value = Mathf.Max(healthPoint.value, regenHealthPoints);
+        }
+        private float GetInitialHealth()
+        {
+            return stats.GetStat(Stat.Health);
         }
 
         private void Die()
@@ -128,6 +120,10 @@ namespace Attributes
             {
                 Die();
             }
+        }
+        private void OnDisable()
+        {
+            stats.onLevelUp -= RegenerateHealth;
         }
     }
 }

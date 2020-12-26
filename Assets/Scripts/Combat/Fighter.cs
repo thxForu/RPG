@@ -12,31 +12,31 @@ namespace Combat
 {
     public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
-        
+
         [SerializeField] private float timeBetweenAttacks = 1f;
         [SerializeField] private Transform rightHandTransform;
         [SerializeField] private Transform leftHandTransform;
-        [SerializeField] private WeaponConfig defaultWeaponConfig;
-        
+        [SerializeField] private WeaponConfig defaultWeapon;
+
+        private LazyValue<Weapon> _currentWeapon;
         private Health _target;
-        LazyValue<WeaponConfig> _currentWeapon;
+        private WeaponConfig _currentWeaponConfig;
         private float _timeSinceLastAttack = Mathf.Infinity;
-        
+
         private static readonly int AttackT = Animator.StringToHash("attack");
         private static readonly int StopAttackT = Animator.StringToHash("stopAttack");
 
         private void Awake()
         {
-            _currentWeapon = new LazyValue<WeaponConfig>(SetupDefaultWeapon);
+            _currentWeaponConfig = defaultWeapon;
+            _currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
         }
-
         
-
         private void Start()
         {
             _currentWeapon.ForceInit();
         }
-        
+
         private void Update()
         {
             _timeSinceLastAttack += Time.deltaTime;
@@ -44,7 +44,7 @@ namespace Combat
             if (_target == null) return;
             if (_target.IsDead()) return;
             
-            if (_target != null && !GetIsInRange())
+            if (_target != null && !GetIsInRange(_target.transform))
             {
                 GetComponent<Mover>().MoveTo(_target.transform.position, 1f);  
             }
@@ -54,21 +54,20 @@ namespace Combat
                 AttackBehavior();
             }
         }
-        private WeaponConfig SetupDefaultWeapon()
+        private Weapon SetupDefaultWeapon()
         {
-            AttachWeapon(defaultWeaponConfig);
-            return defaultWeaponConfig;
+            return AttachWeapon(defaultWeapon);
         }
         public void EquipWeapon(WeaponConfig weaponConfig)
         {
-            _currentWeapon.value = weaponConfig;
-            AttachWeapon(weaponConfig);
+            _currentWeaponConfig = weaponConfig;
+            _currentWeapon.value = AttachWeapon(weaponConfig);
         }
 
-        private void AttachWeapon(WeaponConfig weaponConfig)
+        private Weapon AttachWeapon(WeaponConfig weaponConfig)
         {
             Animator animator = GetComponent<Animator>();
-            weaponConfig.Spawn(rightHandTransform, leftHandTransform, animator);
+            return weaponConfig.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
         public Health GetTarget()
@@ -98,9 +97,14 @@ namespace Combat
             if (_target == null) return;
 
             float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
-            if (_currentWeapon.value.HasProjectile())
+
+            if (_currentWeapon.value != null)
             {
-                _currentWeapon.value.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, damage);
+                _currentWeapon.value.OnHit();
+            }
+            if (_currentWeaponConfig.HasProjectile())
+            {
+                _currentWeaponConfig.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, damage);
             }
             else
             {
@@ -113,9 +117,9 @@ namespace Combat
             Hit();
         }
 
-        private bool GetIsInRange()
+        private bool GetIsInRange(Transform targetTransform)
         {
-            bool isInRange = Vector3.Distance(transform.position, _target.transform.position) < _currentWeapon.value.GetRange();
+            bool isInRange = Vector3.Distance(transform.position, targetTransform.transform.position) < _currentWeaponConfig.GetRange();
             return isInRange;
         }
 
@@ -128,7 +132,8 @@ namespace Combat
         public bool CanAttack(GameObject combatTarget) 
         {
             if (combatTarget == null) return false;
-            
+            if (GetComponent<Mover>().CanMoveTo(combatTarget.transform.position)
+                && !GetIsInRange(combatTarget.transform)) return false;
             Health targetToTest = combatTarget.GetComponent<Health>();
             return targetToTest != null && !targetToTest.IsDead();
         }
@@ -150,7 +155,7 @@ namespace Combat
 
             if (stat == Stat.Damage)
             {
-                yield return _currentWeapon.value.GetDamage();
+                yield return _currentWeaponConfig.GetDamage();
                 
             }
         }
@@ -159,13 +164,13 @@ namespace Combat
         {
             if (stat == Stat.Damage)
             {
-                yield return _currentWeapon.value.GetPercentageBonus();
+                yield return _currentWeaponConfig.GetPercentageBonus();
             }
         }
 
         public object CaptureState()
        {
-           return _currentWeapon.value.name;
+           return _currentWeaponConfig.name;
        }
 
        public void RestoreState(object state)

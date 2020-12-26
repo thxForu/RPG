@@ -16,13 +16,14 @@ namespace Combat
         [SerializeField] private Projectille projectile;
 
         private const string weaponName = "weapon";
-        public void Spawn(Transform rightHand, Transform leftHand , Animator animator)
+        public Weapon Spawn(Transform rightHand, Transform leftHand , Animator animator)
         {
+            Weapon weapon = null;
             DestroyOldWeapon(rightHand, leftHand);
             if (equippedPrefab != null)
             {
                 var handTransform = GetTransform(rightHand, leftHand);
-                Weapon weapon = Instantiate(equippedPrefab, handTransform);
+                weapon = Instantiate(equippedPrefab, handTransform);
                 weapon.gameObject.name = weaponName;
             }
             var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
@@ -34,6 +35,7 @@ namespace Combat
             {
                 animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
             }
+            return weapon;
         }
 
         private void DestroyOldWeapon(Transform rightHand, Transform leftHand)

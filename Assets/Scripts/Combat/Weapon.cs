@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Combat
 {
     public class Weapon : MonoBehaviour
     {
-        public void onHit()
+        [SerializeField] private UnityEvent onHit;
+        public void OnHit()
         {
-            
+            onHit.Invoke();
         }
     }
 }
