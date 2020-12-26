@@ -1,9 +1,9 @@
 ﻿using System;
+using Attributes;
 using Combat;
 using Core;
 using GameDevTV.Utils;
 using Movement;
-using Resources;
 using UnityEngine;
 
 namespace Control

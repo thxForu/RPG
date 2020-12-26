@@ -278,6 +278,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4442504364522232604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5375652735622959627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -631395098267907817, guid: 8c39f8c10159e5f41a4cca6e5069bd57,
+    type: 3}
+  m_PrefabInstance: {fileID: 4442504364522232604}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305977900414361263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415d546c2209450bb5b9a37bf9e9529a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8551008599478329347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,6 +302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4490326956063878835, guid: 74ab445febb41554e9aa1109281d6f32,
+        type: 3}
+      propertyPath: healthComponent
+      value: 
+      objectReference: {fileID: 5375652735622959627}
     - target: {fileID: 7012724400927725046, guid: 74ab445febb41554e9aa1109281d6f32,
         type: 3}
       propertyPath: m_LocalPosition.x

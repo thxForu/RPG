@@ -1,12 +1,11 @@
-﻿using System;
-using Core;
+﻿using Core;
 using GameDevTV.Utils;
 using Saving;
 using Stats;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Resources
+namespace Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
@@ -74,6 +73,10 @@ namespace Resources
             }
         }
 
+        public float GetFraction()
+        {
+            return healthPoint.value / GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
         public float GetHealthPoints()
         {
             return healthPoint.value;
@@ -86,7 +89,7 @@ namespace Resources
 
         public float GetPercentage()
         {
-            return 100 * (healthPoint.value / GetComponent<BaseStats>().GetStat(Stat.Health));
+            return 100 * GetFraction();
         }
         private void RegenerateHealth()
         {

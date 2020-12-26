@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7012724400927725046}
-  - component: {fileID: 942795697168181232}
+  - component: {fileID: 4490326956063878835}
   m_Layer: 0
   m_Name: Health Bar
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &942795697168181232
+--- !u!114 &4490326956063878835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,9 +116,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2352929355371986456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f18474a46eeb3241909ec6d4a5c59db, type: 3}
+  m_Script: {fileID: 11500000, guid: bcbfc4c9669e03e4390edcc77fed30f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthComponent: {fileID: 0}
+  foreground: {fileID: 4327548517301567007}
+  rootCanvas: {fileID: 7292939843578001391}
 --- !u!1 &6301646185155546161
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +210,7 @@ GameObject:
   - component: {fileID: 7292939843578001391}
   - component: {fileID: 6744974196805281642}
   - component: {fileID: 7164458058094684712}
+  - component: {fileID: 4340758932673731949}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -294,3 +298,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4340758932673731949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600114045481390919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f18474a46eeb3241909ec6d4a5c59db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

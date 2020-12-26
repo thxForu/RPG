@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Attributes;
 using Core;
 using GameDevTV.Utils;
 using Movement;
-using Resources;
 using Saving;
 using Stats;
 using UnityEngine;

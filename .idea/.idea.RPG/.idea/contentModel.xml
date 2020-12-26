@@ -93,6 +93,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="Health.cs" t="Include" />
+            <e p="HealthBar.cs" t="Include" />
+            <e p="HealthDisplay.cs" t="Include" />
+          </e>
           <e p="Cinematic" t="Include">
             <e p="CinematicControlRemover.cs" t="Include" />
             <e p="CinematicTrigger.cs" t="Include" />
@@ -122,10 +127,6 @@
           </e>
           <e p="Movement" t="Include">
             <e p="Mover.cs" t="Include" />
-          </e>
-          <e p="Resources" t="Include">
-            <e p="Health.cs" t="Include" />
-            <e p="HealthDisplay.cs" t="Include" />
           </e>
           <e p="Saving" t="Include">
             <e p="ISaveable.cs" t="Include" />
